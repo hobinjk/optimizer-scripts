@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "node-fetch": "^3.3.0"
+  },
+  "name": "opti-scripts",
+  "version": "1.0.0",
+  "main": "reaper.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hobinjk@gmail.com",
+  "license": "MIT",
+  "description": "",
+  "type": "module"
+}
