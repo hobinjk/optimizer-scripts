@@ -1,7 +1,9 @@
 import fetch from 'node-fetch';
 // bountiful is players[0].statsAll[0].avgBoons btw
 (async function() {
-  const res = await fetch('https://dps.report/getJson?permalink=5ShG-20230714-032530_golem');
+  let url = 'https://dps.report/SbRf-20231003-025202_golem';
+  url = url.replace('report/', 'report/getJson?permalink=');
+  const res = await fetch(url);
   const log = await res.json();
   process(log);
 })();
@@ -26,6 +28,10 @@ const attIds = {
     primary: Attunement.Earth,
     secondary: Attunement.Earth
   },
+  '-5': {
+    primary: Attunement.Fire,
+    secondary: Attunement.Water,
+  },
   '-6': {
     primary: Attunement.Fire,
     secondary: Attunement.Air,
@@ -37,6 +43,14 @@ const attIds = {
   '-8': {
     primary: Attunement.Water,
     secondary: Attunement.Fire
+  },
+  '-9': {
+    primary: Attunement.Water,
+    secondary: Attunement.Air
+  },
+  '-10': { // unconfirmed
+    primary: Attunement.Water,
+    secondary: Attunement.Earth
   },
   '-11': {
     primary: Attunement.Air,
@@ -57,6 +71,10 @@ const attIds = {
   '-15': {
     primary: Attunement.Earth,
     secondary: Attunement.Water,
+  },
+  '-16': { // unconfirmed
+    primary: Attunement.Earth,
+    secondary: Attunement.Air
   },
 };
 

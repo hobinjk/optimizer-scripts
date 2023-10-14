@@ -5,7 +5,7 @@ import fetch from 'node-fetch';
   // const res = await fetch('https://dps.report/getJson?permalink=HzZk-20221213-184016_golem');
   // const res = await fetch('https://dps.report/getJson?permalink=0ImQ-20230502-185448_golem');
   // const res = await fetch('https://dps.report/getJson?permalink=D1Pu-20230615-085048_golem');
-  const res = await fetch('https://dps.report/getJson?permalink=ke6e-20230719-163514_golem');
+  const res = await fetch('https://dps.report/getJson?permalink=Pypi-20231003-192433_golem');
   const log = await res.json();
   process(log);
 })();

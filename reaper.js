@@ -1,7 +1,8 @@
 import fetch from 'node-fetch';
 (async function() {
-  // const res = await fetch('https://dps.report/getJson?permalink=rgyk-20221201-104257_golem');
-  const res = await fetch('https://dps.report/getJson?permalink=XI5L-20230521-175913_golem');
+  let url = 'https://dps.report/O08l-20231002-152104_golem';
+  url = url.replace('report/', 'report/getJson?permalink=');
+  const res = await fetch(url);
   const log = await res.json();
   process(log);
 })();
@@ -21,7 +22,7 @@ function process(log) {
     return;
   }
 
-  let damage = player.targetDamage1S[0][0];
+  let damage = player.targetPowerDamage1S[0][0];
   let damageInShroud = 0;
   let states = shroudUptime.states;
   states.push([log.durationMS, 0])
