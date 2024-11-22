@@ -76,6 +76,19 @@ const attIds = {
     primary: Attunement.Earth,
     secondary: Attunement.Air
   },
+
+  '5585': { // real fire
+    primary: Attunement.Fire,
+    secondary: Attunement.Fire,
+  },
+  '5575': { // real air
+    primary: Attunement.Air,
+    secondary: Attunement.Air,
+  },
+  '5580': { // real earth
+    primary: Attunement.Earth,
+    secondary: Attunement.Earth,
+  }
 };
 
 function process(log) {
