@@ -8,11 +8,14 @@ import fetch from 'node-fetch';
 })();
 
 function process(log) {
-  const shroudBuff = 29446;
+  const shroudBuffs = {
+    29446: true, // Reaper shroud
+    59964: true, // Harbinger shroud
+  };
   const player = log.players[0];
   let shroudUptime = null;
   for (let uptime of player.buffUptimes) {
-    if (uptime.id === shroudBuff) {
+    if (shroudBuffs[uptime.id]) {
       shroudUptime = uptime;
       break;
     }
